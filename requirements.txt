@@ -1,0 +1,10 @@
+ultralytics
+opencv-python
+pyserial
+numpy
+
+# picamera2 ships with Raspberry Pi OS Bookworm. If missing:
+#   sudo apt install -y python3-picamera2
+#
+# Optional, only if USE_RECOGNITION = True (heavy dlib build):
+# face_recognition
