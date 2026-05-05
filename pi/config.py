@@ -1,7 +1,7 @@
 """Tunables for the pan-tilt face tracker. Edit here, not in the modules."""
 
 # --- Serial link to Arduino ---
-SERIAL_PORT = "/dev/ttyACM0"   # often /dev/ttyACM0 for Uno/Nano clones; try /dev/ttyUSB0 if not
+SERIAL_PORT = "/dev/ttyUSB0"   # often /dev/ttyACM0 for Uno/Nano clones; try /dev/ttyUSB0 if not
 SERIAL_BAUD = 115200
 COMMAND_HZ  = 30               # max commands per second to Arduino
 
@@ -12,7 +12,7 @@ INFER_WIDTH    = 320           # frame is downscaled to this before inference
 INFER_HEIGHT   = 240
 
 # --- Detector ---
-MODEL_PATH      = "models/yolov8n-face.pt"
+MODEL_PATH      = "../models/yolov8n-face.pt"
 DETECTION_CONF  = 0.5
 
 # --- Servo limits (degrees) ---
