@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+
+# Model weights (large, download separately)
+models/*.pt
+models/*.onnx
+models/*.engine
+
+# Personal face photos for recognition
+faces/*
+!faces/.gitkeep
+
+# Ultralytics runtime artifacts
+runs/
+*.cache
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Arduino build artifacts
+arduino/build/
+*.hex
