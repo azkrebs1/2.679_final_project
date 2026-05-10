@@ -32,14 +32,14 @@ def main():
             target = FaceDetector.largest(boxes)
 
             # 🔴 DRAW BOXES (scale back up)
-            print("BOXES FORMAT: ")
-            print(boxes)
-            for (x, y, w, h) in boxes:
-                x = int(x * frame.shape[1] / config.INFER_WIDTH)
-                y = int(y * frame.shape[0] / config.INFER_HEIGHT)
-                w = int(w * frame.shape[1] / config.INFER_WIDTH)
-                h = int(h * frame.shape[0] / config.INFER_HEIGHT)
-                cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 255, 0), 2)
+            sx = frame.shape[1] / config.INFER_WIDTH
+            sy = frame.shape[0] / config.INFER_HEIGHT
+            for (x1, y1, x2, y2, _conf) in boxes:
+                x1 = int(x1 * sx)
+                y1 = int(y1 * sy)
+                x2 = int(x2 * sx)
+                y2 = int(y2 * sy)
+                cv2.rectangle(frame, (x1, y1), (x2, y2), (0, 255, 0), 2)
 
             # 🔴 SHOW FRAME
             cv2.imshow("Camera", frame)
