@@ -27,6 +27,18 @@ TILT_CENTER = 90
 KP_PAN  = 0.05
 KP_TILT = 0.05
 
+# Derivative gain in degrees per (pixel/frame) of error change.
+# Damps overshoot. Start ~0.5*KP, raise until oscillation stops.
+KD_PAN  = 0.02
+KD_TILT = 0.02
+
+# EMA smoothing on the bbox center, 0..1. Higher = snappier but noisier.
+INPUT_EMA_ALPHA = 0.4
+
+# Max degrees the servo command can change per update. Prevents flicks
+# from a single bad detection and reduces servo buzz.
+MAX_STEP_DEG = 3.0
+
 # Flip these if the camera moves the wrong direction once servos are wired.
 PAN_SIGN  = -1
 TILT_SIGN = -1
