@@ -41,7 +41,7 @@ MAX_STEP_DEG = 3.0
 
 # Flip these if the camera moves the wrong direction once servos are wired.
 PAN_SIGN  = -1
-TILT_SIGN = -1
+TILT_SIGN = 1
 
 # Don't twitch on tiny errors.
 DEADZONE_PX = 10
